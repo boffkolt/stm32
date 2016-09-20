@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="cortex-m3" Database="">
+  <Project Name="stm32" Path="stm32/stm32.project" Active="No"/>
+  <Project Name="12" Path="12/12.project" Active="No"/>
+  <Project Name="c" Path="c/c.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="stm32" ConfigName="Debug"/>
+      <Project Name="first_gui" ConfigName="Debug"/>
+      <Project Name="1" ConfigName="Debug"/>
+      <Project Name="12" ConfigName="Debug"/>
+      <Project Name="c" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="no">
+      <Environment/>
+      <Project Name="stm32" ConfigName="Release"/>
+      <Project Name="first_gui" ConfigName="Release"/>
+      <Project Name="1" ConfigName="Release"/>
+      <Project Name="12" ConfigName="Release"/>
+      <Project Name="c" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
