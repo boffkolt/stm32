@@ -5,15 +5,15 @@
 ## Debug
 ProjectName            :=stm32
 ConfigurationName      :=Debug
-WorkspacePath          :=/media/engineer/data/GIT/stm32
-ProjectPath            :=/media/engineer/data/GIT/stm32/stm32
+WorkspacePath          :="/media/engineer/Новый том/GIT/stm32"
+ProjectPath            :="/media/engineer/Новый том/GIT/stm32/stm32"
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=engineer
-Date                   :=04/10/16
+Date                   :=06/10/16
 CodeLitePath           :=/home/engineer/.codelite
 LinkerName             :=/usr/bin/arm-none-eabi-g++
 SharedObjectLinkerName :=/usr/bin/arm-none-eabi-g++ -shared -fPIC
@@ -92,7 +92,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(ObjectSuffix): sys/startup_stm32f10x_md_vl.S $(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(DependSuffix)
-	$(AS) "/media/engineer/data/GIT/stm32/stm32/sys/startup_stm32f10x_md_vl.S" $(ASFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(ObjectSuffix) -I$(IncludePath)
+	$(AS) "/media/engineer/Новый том/GIT/stm32/stm32/sys/startup_stm32f10x_md_vl.S" $(ASFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(ObjectSuffix) -I$(IncludePath)
 $(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(DependSuffix): sys/startup_stm32f10x_md_vl.S
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(ObjectSuffix) -MF$(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(DependSuffix) -MM sys/startup_stm32f10x_md_vl.S
 
@@ -100,7 +100,7 @@ $(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(PreprocessSuffix): sys/s
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/sys_startup_stm32f10x_md_vl.S$(PreprocessSuffix)sys/startup_stm32f10x_md_vl.S
 
 $(IntermediateDirectory)/src_main.c$(ObjectSuffix): src/main.c $(IntermediateDirectory)/src_main.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/media/engineer/data/GIT/stm32/stm32/src/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/media/engineer/Новый том/GIT/stm32/stm32/src/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_main.c$(DependSuffix): src/main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_main.c$(DependSuffix) -MM src/main.c
 
@@ -108,7 +108,7 @@ $(IntermediateDirectory)/src_main.c$(PreprocessSuffix): src/main.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_main.c$(PreprocessSuffix)src/main.c
 
 $(IntermediateDirectory)/src_system_stm32f10x.c$(ObjectSuffix): src/system_stm32f10x.c $(IntermediateDirectory)/src_system_stm32f10x.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "/media/engineer/data/GIT/stm32/stm32/src/system_stm32f10x.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_system_stm32f10x.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "/media/engineer/Новый том/GIT/stm32/stm32/src/system_stm32f10x.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_system_stm32f10x.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_system_stm32f10x.c$(DependSuffix): src/system_stm32f10x.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_system_stm32f10x.c$(ObjectSuffix) -MF$(IntermediateDirectory)/src_system_stm32f10x.c$(DependSuffix) -MM src/system_stm32f10x.c
 
