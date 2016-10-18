@@ -23,7 +23,7 @@ END GROUP
                 0x0000000000000000                _Min_Heap_Size = 0x0
                 0x0000000000000080                _Min_Stack_Size = 0x80
 
-.text           0x0000000008000000      0x480
+.text           0x0000000008000000      0x484
                 0x0000000008000000                . = ALIGN (0x4)
  *(.isr_vector)
  .isr_vector    0x0000000008000000      0x1d0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
@@ -87,69 +87,69 @@ END GROUP
  *fill*         0x000000000800022a        0x2 
  .text.InitAll  0x000000000800022c       0x4c ./Debug/src_main.c.o
                 0x000000000800022c                InitAll
- .text.main     0x0000000008000278       0x1c ./Debug/src_main.c.o
+ .text.main     0x0000000008000278       0x20 ./Debug/src_main.c.o
                 0x0000000008000278                main
  .text.SystemInit
-                0x0000000008000294       0x6c ./Debug/src_system_stm32f10x.c.o
-                0x0000000008000294                SystemInit
+                0x0000000008000298       0x6c ./Debug/src_system_stm32f10x.c.o
+                0x0000000008000298                SystemInit
  .text.SystemCoreClockUpdate
-                0x0000000008000300       0xd4 ./Debug/src_system_stm32f10x.c.o
-                0x0000000008000300                SystemCoreClockUpdate
+                0x0000000008000304       0xd4 ./Debug/src_system_stm32f10x.c.o
+                0x0000000008000304                SystemCoreClockUpdate
  .text.SetSysClock
-                0x00000000080003d4        0xc ./Debug/src_system_stm32f10x.c.o
+                0x00000000080003d8        0xc ./Debug/src_system_stm32f10x.c.o
  .text.SetSysClockToHSE
-                0x00000000080003e0       0xa0 ./Debug/src_system_stm32f10x.c.o
+                0x00000000080003e4       0xa0 ./Debug/src_system_stm32f10x.c.o
  *(.rodata)
  *(.rodata*)
  *(.glue_7)
- .glue_7        0x0000000008000480        0x0 linker stubs
+ .glue_7        0x0000000008000484        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008000480        0x0 linker stubs
+ .glue_7t       0x0000000008000484        0x0 linker stubs
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x0000000008000480                . = ALIGN (0x4)
-                0x0000000008000480                _etext = .
+                0x0000000008000484                . = ALIGN (0x4)
+                0x0000000008000484                _etext = .
 
-.vfp11_veneer   0x0000000008000480        0x0
- .vfp11_veneer  0x0000000008000480        0x0 linker stubs
+.vfp11_veneer   0x0000000008000484        0x0
+ .vfp11_veneer  0x0000000008000484        0x0 linker stubs
 
-.v4_bx          0x0000000008000480        0x0
- .v4_bx         0x0000000008000480        0x0 linker stubs
+.v4_bx          0x0000000008000484        0x0
+ .v4_bx         0x0000000008000484        0x0 linker stubs
 
-.iplt           0x0000000008000480        0x0
- .iplt          0x0000000008000480        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
+.iplt           0x0000000008000484        0x0
+ .iplt          0x0000000008000484        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
 
-.rel.dyn        0x0000000008000480        0x0
- .rel.iplt      0x0000000008000480        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
+.rel.dyn        0x0000000008000484        0x0
+ .rel.iplt      0x0000000008000484        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008000480        0x0
-                0x0000000008000480                __exidx_start = .
+.ARM            0x0000000008000484        0x0
+                0x0000000008000484                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008000480                __exidx_end = .
+                0x0000000008000484                __exidx_end = .
 
-.preinit_array  0x0000000008000480        0x0
+.preinit_array  0x0000000008000484        0x0
                 [!provide]                        PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
                 [!provide]                        PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000008000480        0x0
+.init_array     0x0000000008000484        0x0
                 [!provide]                        PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
                 [!provide]                        PROVIDE (__init_array_end, .)
 
-.fini_array     0x0000000008000480        0x0
+.fini_array     0x0000000008000484        0x0
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(.fini_array*)
  *(SORT(.fini_array.*))
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x0000000008000480                _sidata = .
+                0x0000000008000484                _sidata = .
 
-.data           0x0000000020000000       0x14 load address 0x0000000008000480
+.data           0x0000000020000000       0x14 load address 0x0000000008000484
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -166,11 +166,11 @@ END GROUP
                 0x0000000020000014                . = ALIGN (0x4)
                 0x0000000020000014                _edata = .
 
-.igot.plt       0x0000000020000014        0x0 load address 0x0000000008000494
+.igot.plt       0x0000000020000014        0x0 load address 0x0000000008000498
  .igot.plt      0x0000000020000014        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
                 0x0000000020000014                . = ALIGN (0x4)
 
-.bss            0x0000000020000014        0x0 load address 0x0000000008000494
+.bss            0x0000000020000014        0x0 load address 0x0000000008000498
                 0x0000000020000014                _sbss = .
                 0x0000000020000014                __bss_start__ = _sbss
  *(.bss)
@@ -186,7 +186,7 @@ END GROUP
                 [!provide]                        PROVIDE (_end, _ebss)
 
 ._user_heap_stack
-                0x0000000020000014       0x80 load address 0x0000000008000494
+                0x0000000020000014       0x80 load address 0x0000000008000498
                 0x0000000020000014                . = ALIGN (0x4)
                 0x0000000020000014                . = (. + _Min_Heap_Size)
                 0x0000000020000094                . = (. + _Min_Stack_Size)
@@ -216,15 +216,15 @@ END GROUP
 Address of section .text set to 0x8000000
 OUTPUT(stm32.elf elf32-littlearm)
 
-.debug_line     0x0000000000000000      0x2cd
- .debug_line    0x0000000000000000       0x9e ./Debug/sys_startup_stm32f10x_md_vl.S.o
- .debug_line    0x000000000000009e       0xdd ./Debug/src_main.c.o
- .debug_line    0x000000000000017b      0x152 ./Debug/src_system_stm32f10x.c.o
+.debug_line     0x0000000000000000      0x2bc
+ .debug_line    0x0000000000000000       0x98 ./Debug/sys_startup_stm32f10x_md_vl.S.o
+ .debug_line    0x0000000000000098       0xd8 ./Debug/src_main.c.o
+ .debug_line    0x0000000000000170      0x14c ./Debug/src_system_stm32f10x.c.o
 
-.debug_info     0x0000000000000000      0x6bd
- .debug_info    0x0000000000000000       0x8a ./Debug/sys_startup_stm32f10x_md_vl.S.o
- .debug_info    0x000000000000008a      0x223 ./Debug/src_main.c.o
- .debug_info    0x00000000000002ad      0x410 ./Debug/src_system_stm32f10x.c.o
+.debug_info     0x0000000000000000      0x6b1
+ .debug_info    0x0000000000000000       0x7e ./Debug/sys_startup_stm32f10x_md_vl.S.o
+ .debug_info    0x000000000000007e      0x223 ./Debug/src_main.c.o
+ .debug_info    0x00000000000002a1      0x410 ./Debug/src_system_stm32f10x.c.o
 
 .debug_abbrev   0x0000000000000000      0x259
  .debug_abbrev  0x0000000000000000       0x12 ./Debug/sys_startup_stm32f10x_md_vl.S.o
@@ -248,17 +248,17 @@ OUTPUT(stm32.elf elf32-littlearm)
  .debug_loc     0x0000000000000000       0x7c ./Debug/src_main.c.o
  .debug_loc     0x000000000000007c      0x110 ./Debug/src_system_stm32f10x.c.o
 
-.debug_str      0x0000000000000000      0x34a
- .debug_str     0x0000000000000000      0x214 ./Debug/src_main.c.o
-                                        0x248 (size before relaxing)
- .debug_str     0x0000000000000214      0x136 ./Debug/src_system_stm32f10x.c.o
-                                        0x32a (size before relaxing)
+.debug_str      0x0000000000000000      0x338
+ .debug_str     0x0000000000000000      0x208 ./Debug/src_main.c.o
+                                        0x23c (size before relaxing)
+ .debug_str     0x0000000000000208      0x130 ./Debug/src_system_stm32f10x.c.o
+                                        0x31e (size before relaxing)
 
 .comment        0x0000000000000000       0x38
  .comment       0x0000000000000000       0x38 ./Debug/src_main.c.o
                                          0x39 (size before relaxing)
  .comment       0x0000000000000038       0x39 ./Debug/src_system_stm32f10x.c.o
 
-.debug_frame    0x0000000000000000       0xe4
- .debug_frame   0x0000000000000000       0x4c ./Debug/src_main.c.o
- .debug_frame   0x000000000000004c       0x98 ./Debug/src_system_stm32f10x.c.o
+.debug_frame    0x0000000000000000       0xe8
+ .debug_frame   0x0000000000000000       0x50 ./Debug/src_main.c.o
+ .debug_frame   0x0000000000000050       0x98 ./Debug/src_system_stm32f10x.c.o
