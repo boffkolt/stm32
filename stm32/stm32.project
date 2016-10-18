@@ -49,6 +49,8 @@
     <File Name="src/stm32f10x_rcc.c" ExcludeProjConfig="Debug"/>
     <File Name="src/system_stm32f10x.c" ExcludeProjConfig=""/>
   </VirtualDirectory>
+  <Dependencies Name="Debug"/>
+  <Dependencies Name="Release"/>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -69,6 +71,7 @@
       <Linker Options="-static; -mcpu=cortex-m3; -mthumb; -mthumb-interwork; -Wl,--start-group;-L/usr/bin/lib/gcc/arm-none-eabi/5.2.1/thumb2; -L/usr/bin/arm-none-eabi/lib/thumb2; -nostdlib; -lg; -lstdc++; -lsupc++; -lgcc; -lm; -Ttext=0x8000000;-Wl,--end-group; -Xlinker; -Map; -Xlinker $(ProjectName).map; -Xlinker; -T ./sys/stm32f100rb_flash.ld -o $(ProjectName).elf" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="./$(ProjectName).elf" IntermediateDirectory="./Debug" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="yes" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
       </Environment>
@@ -82,7 +85,7 @@ monitor echo "Load image..."
 load 
 monitor reset</PostConnectCommands>
         <StartupCommands>./home/engineer/coding/OPENOCD_CONF/scripts/openocd.sh
-file /home/engineer/coding/codelite/cortex-m3/stm32/stm32.elf</StartupCommands>
+file /home/engineer/GIT/stm32/stm32/stm32.elf</StartupCommands>
       </Debugger>
       <PreBuild/>
       <PostBuild/>
@@ -115,6 +118,7 @@ file /home/engineer/coding/codelite/cortex-m3/stm32/stm32.elf</StartupCommands>
       <Linker Options="" Required="yes"/>
       <ResourceCompiler Options="" Required="no"/>
       <General OutputFile="$(IntermediateDirectory)/$(ProjectName)" IntermediateDirectory="./Release" Command="./$(ProjectName)" CommandArguments="" UseSeparateDebugArgs="no" DebugArguments="" WorkingDirectory="$(IntermediateDirectory)" PauseExecWhenProcTerminates="yes" IsGUIProgram="no" IsEnabled="yes"/>
+      <BuildSystem Name="Default"/>
       <Environment EnvVarSetName="&lt;Use Defaults&gt;" DbgSetName="&lt;Use Defaults&gt;">
         <![CDATA[]]>
       </Environment>
@@ -147,6 +151,4 @@ file /home/engineer/coding/codelite/cortex-m3/stm32/stm32.elf</StartupCommands>
       </Completion>
     </Configuration>
   </Settings>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
 </CodeLite_Project>
