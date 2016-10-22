@@ -216,10 +216,10 @@ END GROUP
 Address of section .text set to 0x8000000
 OUTPUT(stm32.elf elf32-littlearm)
 
-.debug_line     0x0000000000000000      0x2bc
+.debug_line     0x0000000000000000      0x2cc
  .debug_line    0x0000000000000000       0x98 ./Debug/sys_startup_stm32f10x_md_vl.S.o
- .debug_line    0x0000000000000098       0xd8 ./Debug/src_main.c.o
- .debug_line    0x0000000000000170      0x14c ./Debug/src_system_stm32f10x.c.o
+ .debug_line    0x0000000000000098       0xe8 ./Debug/src_main.c.o
+ .debug_line    0x0000000000000180      0x14c ./Debug/src_system_stm32f10x.c.o
 
 .debug_info     0x0000000000000000      0x6c6
  .debug_info    0x0000000000000000       0x80 ./Debug/sys_startup_stm32f10x_md_vl.S.o

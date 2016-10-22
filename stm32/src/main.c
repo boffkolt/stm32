@@ -1,27 +1,10 @@
-#include  "stm32f10x.h"
+#include    "stm32f10x.h"
+#include    "init_all.c"
 
 
 
 
 
-void InitAll (void)
-
-{
-
-    RCC->CR |= 0x00004683 ;
-    RCC->CFGR = 0x000000;
-    RCC->APB2ENR = 0x0000000C;
-//  RCC->APB1ENR =RCC_APB1ENR_TIM2EN;
-    GPIOA->CRL = 0x11111111;
-   // GPIOA->CRH = 0x44444444;
-    GPIOB->CRL = 0x44444444;
-    //GPIOB->CRH = 0x44444444;
-//TIM2->CCER=TIM_CCER_CC2E|TIM_CCER_CC1E;
-//TIM2->CCMR1|=TIM_CCMR1_OC1M_1|TIM_CCMR1_OC1M_2|TIM_CCMR1_OC2M_1|TIM_CCMR1_OC2M_2;
-//TIM2->CR1=TIM_CR1_CEN;
-    GPIOB->ODR=0x0000000000;
-
-}
 
 
 int main(void)
