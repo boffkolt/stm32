@@ -85,7 +85,7 @@ monitor echo "Load image..."
 load 
 monitor reset</PostConnectCommands>
         <StartupCommands>./home/engineer/coding/OPENOCD_CONF/scripts/openocd.sh
-file /home/engineer/GIT/stm32/stm32/stm32.elf</StartupCommands>
+file ~/GIT/stm32/stm32/stm32.elf</StartupCommands>
       </Debugger>
       <PreBuild/>
       <PostBuild/>
