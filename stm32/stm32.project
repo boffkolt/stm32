@@ -48,6 +48,7 @@
     <File Name="src/stm32f10x_it.c" ExcludeProjConfig="Debug"/>
     <File Name="src/stm32f10x_rcc.c" ExcludeProjConfig="Debug"/>
     <File Name="src/system_stm32f10x.c" ExcludeProjConfig=""/>
+    <File Name="src/init_all.c"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>
