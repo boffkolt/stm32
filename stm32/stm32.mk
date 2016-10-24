@@ -13,11 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=engineer
-<<<<<<< 32e4174c85119403cb8aec3ec4ec6a75f24b77d1
-Date                   :=22/10/16
-=======
-Date                   :=21/10/16
->>>>>>> 1d2071743bda4b83607dcd63469fa900c6322999
+Date                   :=24/10/16
 CodeLitePath           :=/home/engineer/.codelite
 LinkerName             :=/usr/bin/arm-none-eabi-g++
 SharedObjectLinkerName :=/usr/bin/arm-none-eabi-g++ -shared -fPIC

@@ -84,8 +84,7 @@ monitor soft_reset_halt
 monitor echo "Load image..."
 load 
 monitor reset</PostConnectCommands>
-        <StartupCommands>./home/engineer/coding/OPENOCD_CONF/scripts/openocd.sh
-file ~/GIT/stm32/stm32/stm32.elf</StartupCommands>
+        <StartupCommands>file ~/GIT/stm32/stm32/stm32.elf</StartupCommands>
       </Debugger>
       <PreBuild/>
       <PostBuild/>
