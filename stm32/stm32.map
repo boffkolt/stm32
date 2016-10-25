@@ -13,17 +13,17 @@ LOAD ./Debug/sys_startup_stm32f10x_md_vl.S.o
 LOAD ./Debug/src_main.c.o
 LOAD ./Debug/src_system_stm32f10x.c.o
 START GROUP
-LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libg.a
-LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libstdc++.a
-LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libsupc++.a
-LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/armv7-m/libgcc.a
-LOAD /usr/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv7-m/libm.a
+LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libg.a
+LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libstdc++.a
+LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libsupc++.a
+LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a
+LOAD /usr/lib/gcc/arm-none-eabi/4.9.3/../../../arm-none-eabi/lib/armv7-m/libm.a
 END GROUP
                 0x0000000020002000                _estack = 0x20002000
                 0x0000000000000000                _Min_Heap_Size = 0x0
                 0x0000000000000080                _Min_Stack_Size = 0x80
 
-.text           0x0000000008000000      0x48c
+.text           0x0000000008000000      0x488
                 0x0000000008000000                . = ALIGN (0x4)
  *(.isr_vector)
  .isr_vector    0x0000000008000000      0x1d0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
@@ -90,66 +90,66 @@ END GROUP
  .text.main     0x0000000008000278       0x24 ./Debug/src_main.c.o
                 0x0000000008000278                main
  .text.SystemInit
-                0x000000000800029c       0x70 ./Debug/src_system_stm32f10x.c.o
+                0x000000000800029c       0x6c ./Debug/src_system_stm32f10x.c.o
                 0x000000000800029c                SystemInit
  .text.SystemCoreClockUpdate
-                0x000000000800030c       0xd4 ./Debug/src_system_stm32f10x.c.o
-                0x000000000800030c                SystemCoreClockUpdate
+                0x0000000008000308       0xd4 ./Debug/src_system_stm32f10x.c.o
+                0x0000000008000308                SystemCoreClockUpdate
  .text.SetSysClock
-                0x00000000080003e0        0xc ./Debug/src_system_stm32f10x.c.o
+                0x00000000080003dc        0xc ./Debug/src_system_stm32f10x.c.o
  .text.SetSysClockToHSE
-                0x00000000080003ec       0xa0 ./Debug/src_system_stm32f10x.c.o
+                0x00000000080003e8       0xa0 ./Debug/src_system_stm32f10x.c.o
  *(.rodata)
  *(.rodata*)
  *(.glue_7)
- .glue_7        0x000000000800048c        0x0 linker stubs
+ .glue_7        0x0000000008000488        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000000000800048c        0x0 linker stubs
+ .glue_7t       0x0000000008000488        0x0 linker stubs
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x000000000800048c                . = ALIGN (0x4)
-                0x000000000800048c                _etext = .
+                0x0000000008000488                . = ALIGN (0x4)
+                0x0000000008000488                _etext = .
 
-.vfp11_veneer   0x000000000800048c        0x0
- .vfp11_veneer  0x000000000800048c        0x0 linker stubs
+.vfp11_veneer   0x0000000008000488        0x0
+ .vfp11_veneer  0x0000000008000488        0x0 linker stubs
 
-.v4_bx          0x000000000800048c        0x0
- .v4_bx         0x000000000800048c        0x0 linker stubs
+.v4_bx          0x0000000008000488        0x0
+ .v4_bx         0x0000000008000488        0x0 linker stubs
 
-.iplt           0x000000000800048c        0x0
- .iplt          0x000000000800048c        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
+.iplt           0x0000000008000488        0x0
+ .iplt          0x0000000008000488        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
 
-.rel.dyn        0x000000000800048c        0x0
- .rel.iplt      0x000000000800048c        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
+.rel.dyn        0x0000000008000488        0x0
+ .rel.iplt      0x0000000008000488        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000000000800048c        0x0
-                0x000000000800048c                __exidx_start = .
+.ARM            0x0000000008000488        0x0
+                0x0000000008000488                __exidx_start = .
  *(.ARM.exidx*)
-                0x000000000800048c                __exidx_end = .
+                0x0000000008000488                __exidx_end = .
 
-.preinit_array  0x000000000800048c        0x0
+.preinit_array  0x0000000008000488        0x0
                 [!provide]                        PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
                 [!provide]                        PROVIDE (__preinit_array_end, .)
 
-.init_array     0x000000000800048c        0x0
+.init_array     0x0000000008000488        0x0
                 [!provide]                        PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array*)
                 [!provide]                        PROVIDE (__init_array_end, .)
 
-.fini_array     0x000000000800048c        0x0
+.fini_array     0x0000000008000488        0x0
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(.fini_array*)
  *(SORT(.fini_array.*))
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x000000000800048c                _sidata = .
+                0x0000000008000488                _sidata = .
 
-.data           0x0000000020000000       0x14 load address 0x000000000800048c
+.data           0x0000000020000000       0x14 load address 0x0000000008000488
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -166,11 +166,11 @@ END GROUP
                 0x0000000020000014                . = ALIGN (0x4)
                 0x0000000020000014                _edata = .
 
-.igot.plt       0x0000000020000014        0x0 load address 0x00000000080004a0
+.igot.plt       0x0000000020000014        0x0 load address 0x000000000800049c
  .igot.plt      0x0000000020000014        0x0 ./Debug/sys_startup_stm32f10x_md_vl.S.o
                 0x0000000020000014                . = ALIGN (0x4)
 
-.bss            0x0000000020000014        0x0 load address 0x00000000080004a0
+.bss            0x0000000020000014        0x0 load address 0x000000000800049c
                 0x0000000020000014                _sbss = .
                 0x0000000020000014                __bss_start__ = _sbss
  *(.bss)
@@ -186,7 +186,7 @@ END GROUP
                 [!provide]                        PROVIDE (_end, _ebss)
 
 ._user_heap_stack
-                0x0000000020000014       0x80 load address 0x00000000080004a0
+                0x0000000020000014       0x80 load address 0x000000000800049c
                 0x0000000020000014                . = ALIGN (0x4)
                 0x0000000020000014                . = (. + _Min_Heap_Size)
                 0x0000000020000094                . = (. + _Min_Stack_Size)
@@ -221,15 +221,15 @@ OUTPUT(stm32.elf elf32-littlearm)
  .debug_line    0x0000000000000098       0xe8 ./Debug/src_main.c.o
  .debug_line    0x0000000000000180      0x14c ./Debug/src_system_stm32f10x.c.o
 
-.debug_info     0x0000000000000000      0x6c6
- .debug_info    0x0000000000000000       0x80 ./Debug/sys_startup_stm32f10x_md_vl.S.o
- .debug_info    0x0000000000000080      0x223 ./Debug/src_main.c.o
- .debug_info    0x00000000000002a3      0x423 ./Debug/src_system_stm32f10x.c.o
+.debug_info     0x0000000000000000      0x6b1
+ .debug_info    0x0000000000000000       0x7e ./Debug/sys_startup_stm32f10x_md_vl.S.o
+ .debug_info    0x000000000000007e      0x223 ./Debug/src_main.c.o
+ .debug_info    0x00000000000002a1      0x410 ./Debug/src_system_stm32f10x.c.o
 
-.debug_abbrev   0x0000000000000000      0x25b
+.debug_abbrev   0x0000000000000000      0x259
  .debug_abbrev  0x0000000000000000       0x12 ./Debug/sys_startup_stm32f10x_md_vl.S.o
  .debug_abbrev  0x0000000000000012       0xcc ./Debug/src_main.c.o
- .debug_abbrev  0x00000000000000de      0x17d ./Debug/src_system_stm32f10x.c.o
+ .debug_abbrev  0x00000000000000de      0x17b ./Debug/src_system_stm32f10x.c.o
 
 .debug_aranges  0x0000000000000000       0x88
  .debug_aranges
@@ -248,16 +248,16 @@ OUTPUT(stm32.elf elf32-littlearm)
  .debug_loc     0x0000000000000000       0x7c ./Debug/src_main.c.o
  .debug_loc     0x000000000000007c      0x110 ./Debug/src_system_stm32f10x.c.o
 
-.debug_str      0x0000000000000000      0x35f
- .debug_str     0x0000000000000000      0x22f ./Debug/src_main.c.o
-                                        0x263 (size before relaxing)
- .debug_str     0x000000000000022f      0x130 ./Debug/src_system_stm32f10x.c.o
-                                        0x345 (size before relaxing)
+.debug_str      0x0000000000000000      0x338
+ .debug_str     0x0000000000000000      0x208 ./Debug/src_main.c.o
+                                        0x23c (size before relaxing)
+ .debug_str     0x0000000000000208      0x130 ./Debug/src_system_stm32f10x.c.o
+                                        0x31e (size before relaxing)
 
-.comment        0x0000000000000000       0x6e
- .comment       0x0000000000000000       0x6e ./Debug/src_main.c.o
-                                         0x6f (size before relaxing)
- .comment       0x000000000000006e       0x6f ./Debug/src_system_stm32f10x.c.o
+.comment        0x0000000000000000       0x38
+ .comment       0x0000000000000000       0x38 ./Debug/src_main.c.o
+                                         0x39 (size before relaxing)
+ .comment       0x0000000000000038       0x39 ./Debug/src_system_stm32f10x.c.o
 
 .debug_frame    0x0000000000000000       0xe8
  .debug_frame   0x0000000000000000       0x50 ./Debug/src_main.c.o
